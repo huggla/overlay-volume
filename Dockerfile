@@ -9,4 +9,5 @@ VOLUME /merged
 
 RUN mkdir /tmp/workdir
 
-CMD 'mount -t overlay overlay -o lowerdir=/lowerdir,upperdir=/upperdir,workdir=/tmp/workdir /merged'
+ENTRYPOINT ["/bin/sh", "-c"]
+CMD ["mount -t overlay overlay -o lowerdir=/lowerdir,upperdir=/upperdir,workdir=/tmp/workdir /merged"]
