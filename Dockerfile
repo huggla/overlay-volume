@@ -1,11 +1,6 @@
 FROM busybox
 
-ENV LOWERDIR
-ENV MERGED
-
-VOLUME /lowerdir
-VOLUME /upperdir
-VOLUME /merged
+VOLUME /lowerdir /upperdir /merged
 
 RUN mkdir /tmp/workdir
 
